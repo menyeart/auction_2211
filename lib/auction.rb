@@ -13,6 +13,11 @@ class Auction
     @items.map { |item| item.name }
   end
 
+  def unpopular_items
+    @items.find_all { |item| item.bids == {} }
+  end
+
+
 
 
 end
