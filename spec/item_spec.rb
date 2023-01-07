@@ -67,6 +67,19 @@ describe 'item' do
     expect(item1.closed).to eq(false)
   end
 
+  it "an cannot accept bids after being closed" do
+    auction = Auction.new
+    item1 = Item.new('Chalkware Piggy Bank')
+    attendee1 = Attendee.new(name: 'Megan', budget: '$50')
+    attendee2 = Attendee.new(name: 'Bob', budget: '$75')
+    auction.add_item(item1)
+    item1.add_bid(attendee1, 22)
+    expect(item1.current_high_bid).to eq(22)
+    item1.close_bidding
+    item1.add_bid(attendee2, 50)
+    expect(item1.current_high_bid).to eq(22)
+  end
+
 
 
 
