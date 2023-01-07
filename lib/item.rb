@@ -14,5 +14,4 @@ class Item
     @bids.max_by{|k,v| v}[1]
   end
 
-
 end
