@@ -8,6 +8,11 @@ describe 'auction' do
     expect(auction).to be_an_instance_of(Auction)
   end
 
+  it "starts with an empty list of items" do
+    auction = Auction.new
+    expect(auction.items).to eq([])
+  end
+
 
 end
 
