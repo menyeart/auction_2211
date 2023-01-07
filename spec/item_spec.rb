@@ -61,4 +61,13 @@ describe 'item' do
     item1.add_bid(attendee1, 22)
     expect(item1.current_high_bid).to eq(22)
   end
+
+  it "an item is not closed for bidding by default" do
+    item1 = Item.new('Chalkware Piggy Bank')
+    expect(item1.closed).to eq(false)
+  end
+
+
+
+
 end
