@@ -11,6 +11,11 @@ describe 'item' do
     expect(item.name).to eq('Chalkware Piggy Bank')
   end
 
+  it "does not start with any bids by default" do
+    item = Item.new('Chalkware Piggy Bank')
+    expect(item.bids).to eq({})
+  end
+
 
 
 end
