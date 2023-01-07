@@ -29,6 +29,23 @@ class Auction
     (@items - unpopular_items).map { |item| item.bids.keys}.flatten.uniq
   end
 
+  def nested_hash_creator
+    Hash.new {|h,k| h[k] = Hash.new(0) }
+  end
+
+  def bidder_info
+    bidder_info_hash = nested_hash_creator
+    bidders.each do |bidder|
+      bidder_info_hash[bidder][:budget] = bidder.budget.delete("$").to_i
+      bidder_info_hash[bidder][:items] = []
+      @items.each do |item|
+        bidder_info_hash[bidder][:items] << item if item.bids.keys.include?(bidder)
+        bidder_info_hash[bidder][:items].uniq
+      end
+    end
+    bidder_info_hash
+  end
+
 
 
 
