@@ -25,6 +25,10 @@ class Auction
     total_potential_revenue
   end
 
+  def bidders
+    (@items - unpopular_items).map { |item| item.bids.keys}.flatten.uniq
+  end
+
 
 
 
