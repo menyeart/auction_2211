@@ -3,7 +3,11 @@ class Item
 
   def initialize(name)
     @name = name
-    @bids = {}
+    @bids = Hash.new(0)
+  end
+
+  def add_bid(attendee, price)
+    @bids[attendee] = price
   end
 
 
