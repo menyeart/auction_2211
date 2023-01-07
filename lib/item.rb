@@ -8,11 +8,16 @@ class Item
   end
 
   def add_bid(attendee, price)
-    @bids[attendee] = price
+    @bids[attendee] = price if @closed == false
   end
 
   def current_high_bid
     @bids.max_by{|k,v| v}[1]
   end
+
+  def close_bidding
+    @closed = true
+  end
+
 
 end
