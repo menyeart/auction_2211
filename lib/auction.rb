@@ -9,6 +9,10 @@ class Auction
     @items << item
   end
 
+  def item_names
+    @items.map { |item| item.name }
+  end
+
 
 
 end
