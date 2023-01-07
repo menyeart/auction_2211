@@ -10,5 +10,9 @@ class Item
     @bids[attendee] = price
   end
 
+  def current_high_bid
+    @bids.max_by{|k,v| v}[1]
+  end
+
 
 end
