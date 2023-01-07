@@ -17,8 +17,4 @@ describe 'attendee' do
     attendee = Attendee.new(name: 'Megan', budget: '$50')
     expect(attendee.budget).to eq('$50')
   end
-
-
-
-
 end

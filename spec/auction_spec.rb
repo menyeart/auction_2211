@@ -142,21 +142,5 @@ describe 'auction' do
     allow(auction).to receive(:date).and_return('01/01/2000')
     expect(auction.date).to eq('01/01/2000')
   end
-
-
-
-
-
-  
-
-
-
-  
-
-
-
-
-
-
 end
 

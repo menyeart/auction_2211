@@ -6,5 +6,4 @@ class Attendee
     @budget = attributes[:budget]
   end
 
-
 end

@@ -52,8 +52,5 @@ class Auction
   def date
     @date.strftime("%d/%m/%Y")
   end
-
-
-
-
+  
 end
