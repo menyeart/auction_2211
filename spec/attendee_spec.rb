@@ -12,6 +12,11 @@ describe 'attendee' do
     expect(attendee.name).to eq("Megan")
   end
 
+  it "has an initial budget" do
+    attendee = Attendee.new(name: 'Megan', budget: '$50')
+    expect(attendee.budget).to eq('$50')
+  end
+
 
 
 
