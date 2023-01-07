@@ -1,5 +1,6 @@
 require './lib/item'
 require './lib/attendee'
+require './lib/auction'
 
 describe 'attendee' do
   it "exists" do
